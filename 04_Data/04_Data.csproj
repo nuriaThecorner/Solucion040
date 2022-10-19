@@ -93,6 +93,14 @@
     <Compile Include="Data\Proveedor.cs">
       <DependentUpon>NorthWindTuneadoDbContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="Dtos\CategoriaDto.cs" />
+    <Compile Include="Dtos\ClienteDto.cs" />
+    <Compile Include="Dtos\DetallePedidoDto.cs" />
+    <Compile Include="Dtos\EmpleadoDto.cs" />
+    <Compile Include="Dtos\NavieraDto.cs" />
+    <Compile Include="Dtos\PedidoDto.cs" />
+    <Compile Include="Dtos\ProductoDto.cs" />
+    <Compile Include="Dtos\ProveedorDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\ClientesEmpleadosNavierasPedidoViewModel.cs" />
     <Compile Include="ViewModels\EmpleadoViewModel.cs" />
@@ -124,6 +132,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

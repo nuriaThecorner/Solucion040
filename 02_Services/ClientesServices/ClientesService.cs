@@ -1,7 +1,10 @@
 ﻿using _04_Data.Data;
+using _04_Data.
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using _04_Data.Dtos;
 
 namespace _02_Services.ClientesServices
 {
@@ -17,20 +20,21 @@ namespace _02_Services.ClientesServices
         }
 
         //Index
-        public IList<Cliente> List(int? id)
+        public IList<ClienteDto> List(int? id)
         {
-            IList<Cliente> clientes = null;
+            IList<ClienteDto> clientes = null;
             if (id == null || id < 1)
             {
-                clientes = _db.Cliente.ToList();
+                clientes = (IList < ClienteDto >) _db.Cliente.ToList();
             }
             else
             {
-                clientes = _db.Cliente
+                clientes = (IList < ClienteDto >)_db.Cliente
                                 .Where(x => x.CustomerID == id)
                                 .ToList();
             }
 
+            ClienteDto miCliente = new ClienteDto();
             return clientes;
         }
 
